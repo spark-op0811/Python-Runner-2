@@ -1,0 +1,18 @@
+name: run-python-1
+
+on:
+  push:
+
+run-name: run-python-1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+    - name: Run Python
+      run: python script.py
