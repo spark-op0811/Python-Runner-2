@@ -21,7 +21,7 @@ while c<=pow(2,37):
     if is_prime(c)==1 and is_prime(2*c-1) == 1 :
         m=(pow(3,c-1)-1)%(2*c-1)
         n=(pow(3,c-1)+1)%(2*c-1)
-        print(f"{c} {m} {n}")
+        
         if m==0:
             mo=mo+1
             mom=mom+n
@@ -29,6 +29,7 @@ while c<=pow(2,37):
             ja=ja+1
             wow=wow+m
         if c>=7 and mom==0:
+            print(c)
             break
         
     c=c+1
